@@ -3,11 +3,10 @@ import { useHistory } from 'react-router-dom';
 import {Button, Col, Container, Form, Row} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Login.scss';
-import '../../Style.scss'
 
 function Login() {
-    const [email, setEmail]=useState("");
-    const [password, setPassword]=useState("");
+    const [ email, setEmail ] = useState("");
+    const [ password, setPassword ] = useState("");
     const history = useHistory();
     useEffect(() => {
         if (localStorage.getItem('user-login')) {
@@ -17,7 +16,7 @@ function Login() {
 
     async function login(){
         let item = { email, password };
-        let result = await fetch("https://reqres.in/api/login", {
+        let response = await fetch("https://reqres.in/api/login", {
             method: 'POST', 
             headers: {
                 "Content-Type" : "application/json",
@@ -26,11 +25,15 @@ function Login() {
             body: JSON.stringify(item)
         });
 
-        result = await result.json();
-        localStorage.setItem("user-login",JSON.stringify(result))
-        history.push("/users")
+        if (response.status === 200) {
+            history.push("/users")
+        }
+    
+        else{
+            history.push("*")
+        }
     }
-
+        
     return (
         <div className="container">
             <Container>
@@ -55,13 +58,8 @@ function Login() {
                         </Form>
                     </Col>
                 </Row>
-
             </Container>
-            
         </div>
-
-
-
     )
 }
 

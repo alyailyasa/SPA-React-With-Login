@@ -1,0 +1,40 @@
+<>
+            <Container>
+                <h1 className="shadow-sm mt-5 p-3 text-center rounded">LOGIN PAGE</h1>
+                <Row className="mt-5">
+                    <Col lg={5} md={6} sm={12} className="p-5 m-auto shadow-sm rounded-lg">
+                        <Form>
+                            <Form.Group controlId="formBasicEmail">
+                                <Form.Label>Email address</Form.Label>
+                                <Form.Control type="email" placeholder="Email : eve.holt@reqres.in" onChange={(e)=>setEmail(e.target.value)}/>
+                            </Form.Group>
+                            <br/>
+                            <Form.Group controlId="formBasicPassword">
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control type="password" placeholder="Password : cityslicka" onChange={(e)=>setPassword(e.target.value)}/>
+                            </Form.Group>
+                            <br/>
+                            <Button variant="primary btn-block"  onClick={login}>
+                                Login
+                            </Button>
+                        </Form>
+                    </Col>
+                </Row>
+
+            </Container>
+            
+        </>
+
+
+        handleSubmit = (e)=>{
+            e.preventDefault()
+            this.props.isLogin(true)
+        }
+
+<div className="login-form">
+    <input type="text" placeholder="email : eve.holt@reqres.in" className="" onChange={(e)=>setEmail(e.target.value)}/>
+    <br/>
+    <input type="password" placeholder="pass : cityslicka" className="" onChange={(e)=>setPassword(e.target.value)} />
+    <br/>
+    <button onClick={login} className="btn btn-primary">Login</button>
+</div>

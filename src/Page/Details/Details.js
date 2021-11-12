@@ -1,13 +1,16 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
-const Error = () => {
+export default function Details() {
+    const { id } = useParams();
     return(
-        <>
-            <div style={{textAlign:'center', marginTop: 250}}>
-                <h1>HELLO</h1>
-            </div>
-        </>
-    );
-    
-};
-export default Error;
+      <div className="card">
+        <div className="detail-user">
+          <div>
+            <h1>user id { id }</h1>
+          </div>            
+        </div>
+      </div>
+
+    )
+} 

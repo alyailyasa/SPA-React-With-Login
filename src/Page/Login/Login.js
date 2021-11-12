@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import {Button, Col, Container, Form, Row} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import profiling from '../../Image/profiling.png';
+import './Login.scss';
 
 function Login() {
     const [ email, setEmail ] = useState("");

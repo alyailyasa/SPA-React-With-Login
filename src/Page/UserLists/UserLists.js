@@ -28,7 +28,7 @@ export default function UserLists() {
                       </h3>
                         <p>{ user.email }</p> 
                     </div>
-                    <Link to="/users/{id}" >
+                    <Link to={`/users/${user.id}`} >
                       <button className="button" type="button">Detail</button>
                     </Link>
                   </div>

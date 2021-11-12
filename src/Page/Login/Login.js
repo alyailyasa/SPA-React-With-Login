@@ -31,7 +31,7 @@ function Login() {
         }
     
         else{
-            history.push("*")
+            history.push("/404")
         }
     }
         

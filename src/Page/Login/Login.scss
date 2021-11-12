@@ -9,14 +9,3 @@ $margin : 0px;
    padding: 0;
    color: $mainColor;
 }
-
-@media screen and (max-width: 960px) {
-  .container {
-    margin: $margin;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-}

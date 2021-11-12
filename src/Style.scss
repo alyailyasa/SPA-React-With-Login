@@ -2,6 +2,7 @@
 
 $mainColor : black;
 $margin : 0px;
+$colorBlue : #4accf3;
 
 * {
    font-family: 'Lexend Deca';
@@ -38,7 +39,7 @@ $margin : 0px;
 }
 
 .button{
-  background: #4383fa;
+  background: $colorBlue;
   border-radius: 15px;
   color: rgb(255, 255, 255);
   padding: 3px;
@@ -48,62 +49,20 @@ $margin : 0px;
   cursor: pointer;
 }
 
-.navbar {
-  padding: 20px;
-  align-items: center;
-  max-width: 500px;
-  margin: 0 auto;
-  justify-content: center;
-}
-
-.navbar-h1{
-  color: #4383fa;
-  margin-top: $margin;
-  align-items: center;
-  margin: 0 auto;
-  justify-content: center;
-}
-
-.navbar .links{
+.image{
+  width: 150px;
+  height: 150px;
+  display: block;
   margin-left: auto;
-  align-items: center;
+  margin-right: auto;
 }
 
-.navbar a{
-  margin-left: 16px;
-  color: white;
-  text-decoration: none;
-  padding: 6px ;
-  align-items: center;
-  background-color: #4383fa;
-  border-radius: 10px;
-}
-
-.navbar a:hover{
-  color: aqua;
-}
-
-.content {
-  max-width: 800px;
-  height: 400px;
-  margin: 40px auto;
-  padding: 20px;
-}
-
-.App-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-h3 {
-  margin-bottom: 0.2rem;
-}
-
-.detail {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+.card {
+  width: 350px;
+  height: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 2px 2px 5px $colorBlue;
+  border-radius: 15px;
 }

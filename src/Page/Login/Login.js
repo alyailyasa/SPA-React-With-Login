@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from 'react-router-dom';
 import {Button, Col, Container, Form, Row} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../../Style.scss';
 import profiling from '../../Image/profiling.png';
 
 function Login() {

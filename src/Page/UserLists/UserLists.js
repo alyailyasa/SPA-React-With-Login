@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import '../../Style.scss';
 
 export default function UserLists() {
   const [ users, setUsers ] = useState([]);
@@ -15,7 +16,7 @@ export default function UserLists() {
   
   return (
     <div className="content">
-      <h1 style={{ textAlign:'center', marginTop:50, color:'#4accf3' }}>User Lists</h1>
+      <h1 style={{ textAlign:'center', paddingTop:'30px' }}>User Lists</h1>
         {users.length &&
           users.map((user) => {
             return (
@@ -26,7 +27,7 @@ export default function UserLists() {
                       <h3>
                         <strong>{ user.first_name }</strong>
                       </h3>
-                        <p>{ user.email }</p> 
+                      <p>{ user.email }</p> 
                     </div>
                     <Link to={`/users/${user.id}`} >
                       <button className="button" type="button">Detail</button>

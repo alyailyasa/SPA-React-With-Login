@@ -8,16 +8,14 @@ import './Style.scss';
 
 function App() {
 return (
-
-    <Router>
-        <Switch>
-          <Route path={["/"]} exact key="Login" component={Login}/>
-          <Route path={["/users"]} exact key="UserLists" component={UserLists}/>
-          <Route path={["/users/:id"]} exact key="Details" component={Details}/>
-          <Route path={["*"]} exact key="Error" component={Error}/>
-        </Switch>
-    </Router>
-      
+  <Router>
+    <Switch>
+      <Route path={["/"]} exact key="Login" component={Login}/>
+      <Route path={["/users"]} exact key="UserLists" component={UserLists}/>
+      <Route path={["/users/:id"]} exact key="Details" component={Details}/>
+      <Route path={["*"]} exact key="Error" component={Error}/>
+    </Switch>
+  </Router> 
 );
 }
 

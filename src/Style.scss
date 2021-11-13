@@ -3,6 +3,8 @@
 $mainColor : black;
 $margin : 0px;
 $colorBlue : #4accf3;
+$alignCenter : center;
+$marginAuto : auto;
 
 * {
    font-family: 'Lexend Deca';
@@ -12,43 +14,46 @@ $colorBlue : #4accf3;
 }
 
 .content {
-  align-content: center;
-  text-align: center;
+  align-content: $alignCenter;
+  text-align: $alignCenter;
 }
 
 .card {
   display: inline-grid; 
   grid-template-columns: auto auto auto auto auto auto; 
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
+  align-items: $alignCenter;
+  justify-content: $alignCenter;
+  align-content: $alignCenter;
+  text-align: $alignCenter;
   margin: 20px;
   width: 300px;
   height: 300px;
-  box-shadow: 2px 2px 5px $colorBlue;
+  box-shadow: 2px 5px 5px $colorBlue;
 }
 
 .detail-user {
   display: flex; 
   flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
+  align-items: $alignCenter;
+  justify-content: $alignCenter;
+  align-content: $alignCenter;
+  text-align: $alignCenter;
   max-width: 800px;
 }
 
 .detail-id {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 50px ;
-  margin: 20px;
-  text-align: center;
-  box-shadow: 0 3px 15px rgba(151, 227, 250, 0.089);
+  align-items: $alignCenter;
+  justify-content: $alignCenter;
+  align-content: $alignCenter;
+  text-align: $alignCenter;
+}
+
+.content-id{
+  align-items: $alignCenter;
+  justify-content: $alignCenter;
+  align-content: $alignCenter;
+  text-align: $alignCenter;
 }
 
 .button{
@@ -56,8 +61,8 @@ $colorBlue : #4accf3;
   border-radius: 15px;
   color: rgb(255, 255, 255);
   padding: 3px;
-  margin-top: 0 auto;
-  margin-bottom: 20px;
+  margin-top: 0 $alignCenter;
+  margin-bottom: 10px;
   width: 100px;
   cursor: pointer;
 }
@@ -66,6 +71,6 @@ $colorBlue : #4accf3;
   width: 150px;
   height: 150px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: $alignCenter;
+  margin-right: $alignCenter;
 }

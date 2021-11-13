@@ -23,7 +23,7 @@ function Details() {
 
   return (
     <div className="content-id">
-        <h1 style={{ textAlign:'center', marginTop:"50px" }}>Detail User</h1>
+        <h1 style={{ textAlign:'center', marginTop:"50px" }}>User Detail</h1>
         <br/><br/>
         <div key={ users.id }>
           <img key={ users.avatar } alt={ users } src={ users.avatar } width="200px" height="200px"/>
